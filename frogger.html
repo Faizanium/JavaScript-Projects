@@ -1,0 +1,47 @@
+
+    <div class="wrapper-game" id="stage">
+        <div class="street">
+          <div class="car"></div>
+        </div>
+         <div class="street">
+          <div class="car"></div>
+        </div>
+        <div class="street">
+          <div class="car"></div>
+        </div>
+        <div class="street">
+          <div class="car"></div>
+        </div>
+        <div class="street">
+          <div class="car"></div>
+        </div>
+        <div class="street">
+          <div class="car"></div>
+        </div>
+        <div class="street">
+          <div class="car"></div>
+        </div>
+        <div class="sidewalk">
+        </div>
+        <div class="frogger" id="frog"></div>
+      </div>
+      
+      <script async type="text/javascript">
+      window.onload = function () {
+      
+          var frogger = new Frogger();
+      
+        window.setInterval(function(){
+           frogger.init();
+        }, 100);
+      
+        window.setInterval(function(){
+           frogger.loadCars();
+        }, 5000);
+      
+        document.onkeydown = function (e) {
+          frogger.moveFrog(e);
+        }
+      }
+      
+      </script>
